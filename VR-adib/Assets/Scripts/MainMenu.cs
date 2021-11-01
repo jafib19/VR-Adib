@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
         }
         if (isSettings)
         {
-            SceneManager.LoadScene(3);
+        
         }
         if (isQuit)
         {
@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         }
         if (isHub)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
     }
 }
