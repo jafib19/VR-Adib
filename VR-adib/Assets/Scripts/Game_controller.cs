@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class Game_controller : MonoBehaviour
     private Sprite bgImage; //background image for the buttons
 
     public Sprite[] puzzles;
+
     public List<Sprite> gamePuzzles = new List<Sprite>();
 
     public List<Button> btns = new List<Button>();
@@ -26,6 +28,7 @@ public class Game_controller : MonoBehaviour
     private int secoundGuessIndex; 
 
     private string firstGuessPuzzle, secondGuessPuzzle;
+
 
     void Start()
     {
@@ -66,26 +69,27 @@ public class Game_controller : MonoBehaviour
     {
         foreach (Button btn in btns)
         {
-            btn.onClick.AddListener(() => PickAPuzzle()) ;
+            btn.onClick.AddListener(() => PickAPuzzle()); //error
         }
     }
 
     public void PickAPuzzle()
     {
-        //string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
-        // Debug.Log("You Are Clicking a Button" + name); //using the names of the buttons as index in order to access the arrays
+        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        //Debug.Log("You Are Clicking a Button" + name); //using the names of the buttons as index in order to access the arrays
 
         if (!firstGuess)
         {
+          
             firstGuess = true;
-            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            firstGuessIndex = int.Parse(name); //error
 
             btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
         } 
         else if (!secoundGuess)
         {
             secoundGuess = true;
-            secoundGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            secoundGuessIndex = int.Parse(name);
 
             btns[secoundGuessIndex].image.sprite = gamePuzzles[secoundGuessIndex]; 
         }
