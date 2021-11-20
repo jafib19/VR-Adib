@@ -5,19 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main_Menu.unity
     guid: da8e61513c72d524a92c9ead8cd95abb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Clover_Catch.unity
     guid: 4b7fb590cde11e342b17549758c7d1f4
   - enabled: 1
     path: Assets/Scenes/Memory_Game.unity
     guid: 93344945b0508cc4789b702aa1def01b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: af3fd3808306f97459eadbe69b2279b0, type: 2}
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 9fad8bbe143665c4ca3701c6ed4a07b6, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a3d436be0bb9f364f91bacbd72d68fff, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 593aecdcdc033a147858ab228263e8a3, type: 2}
